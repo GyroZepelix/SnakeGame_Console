@@ -21,17 +21,22 @@ public class Grid {
         }
     }
 
-    /*public void createSnake(int _len, Position _pos) {
+    public void createSnake(int _len, Position _pos) {
         snake = new SnakePart(null);
         snake.pos = _pos;
 
-        for(int currentLength = 0; currentLength < _len; currentLength++) {
-
+        for(int currentLength = 0; currentLength < _len-1; currentLength++) {
+            snake.extend();
         }
-    }*/
+    }
 
-    public void addSnake(SnakePart _snake) {
-        snake = _snake;
+    public void applyPositions(SnakePart _snake) {
+        SnakePart _current = _snake;
+        do {
+
+
+            _current = _current.child;
+        } while (_current.child != null);
     }
 
     public void display(int _spacing) {

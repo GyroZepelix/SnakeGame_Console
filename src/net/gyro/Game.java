@@ -7,13 +7,13 @@ public class Game extends Grid {
         super(sizeX,sizeY);
     }
 
-    /*public void Start(int _snakeSize, int _spacing) {
-
+    public void Start(int _snakeSize, int _spacing) {
+        createSnake(_snakeSize, new Position(sizeX/2,sizeY*2));
         while(true) {
             display(_spacing);
             clrscr();
         }
-    }*/
+    }
 
     public static void clrscr(){
         //Clears Screen in java
