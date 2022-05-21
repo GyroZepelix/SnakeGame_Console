@@ -2,14 +2,14 @@ package net.gyro;
 
 import java.util.ArrayList;
 
-public class GameGrid {
+public class Grid {
 
     int sizeX;
     int sizeY;
     ArrayList<ArrayList<ObjName>> grid = new ArrayList<>();
     SnakePart snake;
 
-    GameGrid (int size_x, int size_y) {
+    Grid(int size_x, int size_y) {
         sizeX = size_x;
         sizeY = size_y;
 
@@ -21,8 +21,9 @@ public class GameGrid {
         }
     }
 
-    /*public void createSnake(int _len) {
+    /*public void createSnake(int _len, Position _pos) {
         snake = new SnakePart(null);
+        snake.pos = _pos;
 
         for(int currentLength = 0; currentLength < _len; currentLength++) {
 
