@@ -10,18 +10,9 @@ public class Game extends Grid {
     public void Start(int _snakeSize, int _spacing) {
         createSnake(_snakeSize, new Position(sizeX/2,sizeY*2));
         while(true) {
+            Helper.moveCrs(0,0);
             display(_spacing);
-            clrscr();
         }
     }
 
-    public static void clrscr(){
-        //Clears Screen in java
-        try {
-            if (System.getProperty("os.name").contains("Windows"))
-                new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
-            else
-                Runtime.getRuntime().exec("clear");
-        } catch (IOException | InterruptedException ex) {System.out.println("SOMETHING WRONG IN CLRSCR() IN GAME.JAVA");}
-    }
 }
