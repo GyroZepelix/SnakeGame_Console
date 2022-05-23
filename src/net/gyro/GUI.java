@@ -11,8 +11,8 @@ public class GUI extends JFrame{
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setTitle("SuS machine");
 
-        JLabel _label = new JLabel();
-        _label.setBounds(20,);
+        JLabel _label = new JLabel("Nigga Balls" );
+        _label.setBounds(20,100, 450,50);
         add(_label);
 
         JButton _button = new JButton("? SUS ?", new ImageIcon("sus.png"));
